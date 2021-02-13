@@ -26,8 +26,7 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post = Post, find(params[:id])
-    post.destroy!
+    @post.destroy!
     redirect_to root_path, alert: "削除しました"
   end
 
